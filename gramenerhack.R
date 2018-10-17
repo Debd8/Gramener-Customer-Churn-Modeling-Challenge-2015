@@ -1,6 +1,6 @@
 ## Reading the Training data into R
 
-gram_train <- read.csv("D:/Gramener_Ideatory/GramenerTraining.csv",header = T, stringsAsFactors = F)
+gram_train <- read.csv(".../Gramener_Ideatory/GramenerTraining.csv",header = T, stringsAsFactors = F)
 
 ## Converting some variables into categorical/factor
 
@@ -70,7 +70,7 @@ gram.ada <- train(Churn~.-Phone, data=gram_train, method="ada",trControl= tc,tun
 
 ## Reading the Evaluation data into R and retaining the variables as in the training set
 
-gram_test <- read.csv("D:/Gramener_Ideatory/GramenerTesting.csv",header = T, stringsAsFactors = F)
+gram_test <- read.csv(".../Gramener_Ideatory/GramenerTesting.csv",header = T, stringsAsFactors = F)
 gram_test$Churn <- NULL
 gram_test_final <- gram_test[,!names(gram_test) %in% drop]
 nocols <- c("Int.l.Plan", "Message.Plan")
